@@ -27,7 +27,9 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <ul class="list-unstyled">
-                <li><a href="read.php">Read record</a></li>
+                <li><a href="read.php">Read Records</a></li>
+                <li><a href="create.php">Create Record</a></li>
+                <li><a href="show.php">Show Record</a></li>
             </ul>
         </div>
     </div>
