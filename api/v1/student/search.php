@@ -10,7 +10,7 @@ header('Access-Control-Allow-Origin: *');
 // http://127.0.0.1:8000/search.php?search=Levan
 $searchValue = isset($_GET['search']) ? $_GET['search'] : die();
 
-include 'config.php';
+include '../../../config.php';
 
 $sql = "SELECT * FROM student WHERE student_name LIKE '%{$searchValue}%'";
 $result = mysqli_query($conn, $sql) or die('Query Error: '.mysqli_error($conn));

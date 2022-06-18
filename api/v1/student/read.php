@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-include 'config.php';
+include '../../../config.php';
 
 $sql = "SELECT * FROM student ORDER BY student_id DESC";
 $result = mysqli_query($conn, $sql) or die('Query Error: '.mysqli_error($conn));

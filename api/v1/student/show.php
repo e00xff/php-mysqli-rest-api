@@ -9,7 +9,7 @@ $studentId = $data['student_id'] ?? false;
 // http://127.0.0.1:8000/show.php?student_id=2
 // $studentId = $_GET['student_id'] ?? false;
 
-include 'config.php';
+include '../../../config.php';
 
 $sql = "SELECT * FROM student WHERE student_id = '{$studentId}'";
 $result = mysqli_query($conn, $sql) or die('Query Error: '.mysqli_error($conn));

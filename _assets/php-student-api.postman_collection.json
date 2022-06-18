@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "15d9176b-fefb-472e-81c2-2dc78d781d57",
+		"name": "php-student-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1726047"
+	},
+	"item": [
+		{
+			"name": "Get students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/student/read.php",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"read.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/student/show.php",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"show.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search\": \"levan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/student/search.php?search=Levan",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Levan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_name\": \"Demo user\",\r\n    \"student_address\": \"Ukraine\",\r\n    \"student_class\": \"2\",\r\n    \"student_phone\": \"56934454\",\r\n    \"student_gender\": \"\",\r\n    \"student_country\": \"\",\r\n    \"student_city\": \"\",\r\n    \"student_languages\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/student/create.php",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"create.php"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_id\": 4,\r\n    \"student_name\": \"CCC\",\r\n    \"student_address\": \"New Georgia\",\r\n    \"student_class\": \"\",\r\n    \"student_phone\": \"\",\r\n    \"student_gender\": \"\",\r\n    \"student_country\": \"\",\r\n    \"student_city\": \"\",\r\n    \"student_languages\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/student/update.php",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"update.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_id\": 5\r\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/student/delete.php",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		}
+	]
+}

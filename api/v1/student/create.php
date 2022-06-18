@@ -2,29 +2,29 @@
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: DELETE');
+header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 $data = json_decode(file_get_contents("php://input"), true);
 
-$studentId = $data['student_id'] ?? false;
 $studentName = $data['student_name'] ?? false;
-$studentAddress = $data['student_address'] ?? false;
-$studentPhone = $data['student_phone'] ?? false;
+$studentAddress = $data['studentAddress'] ?? false;
+$studentPhone = $data['studentPhone'] ?? false;
 
-include 'config.php';
+include '../../../config.php';
 
-$sql = "DELETE FROM student WHERE `student`.`student_id` = '{$studentId}'";
+$sql = "INSERT INTO `student` (`student_name`, `student_address`, `student_phone`) 
+        VALUES ('$studentName', '$studentAddress', '$studentPhone');";
 $result = mysqli_query($conn, $sql) or die('Query Error: '.mysqli_error($conn));
 
 if($result) {
     echo json_encode([
-        'message' => 'Student Record Deleted.',
+        'message' => 'Student Record Inserted.',
         'status' => true
     ]);
 } else {
     echo json_encode([
-        'message' => 'Student Record Not Deleted.',
+        'message' => 'Student Record Not Inserted.',
         'status' => false
     ]);
 }
