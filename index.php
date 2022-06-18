@@ -26,10 +26,13 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
+            <h6>Operations</h6>
             <ul class="list-unstyled">
-                <li><a href="read.php">Read Records</a></li>
-                <li><a href="create.php">Create Record</a></li>
-                <li><a href="show.php">Show Record</a></li>
+                <li>- Read</li>
+                <li>- Create</li>
+                <li>- Show</li>
+                <li>- Search</li>
+                <li>- Update</li>
             </ul>
         </div>
     </div>
