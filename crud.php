@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -45,7 +48,6 @@
                             </div>
 
                             <button type="button" id="save-button" class="btn btn-success btn-sm">Save</button>
-                            <a href="ajax-read-data.php" class="btn btn-light btn-sm">Go Back</a>
                         </form>
                     </div>
                 </div>
