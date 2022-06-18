@@ -33,6 +33,7 @@
                 <li>- Show</li>
                 <li>- Search</li>
                 <li>- Update</li>
+                <li>- Delete</li>
             </ul>
         </div>
     </div>
