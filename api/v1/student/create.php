@@ -8,8 +8,8 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 $data = json_decode(file_get_contents("php://input"), true);
 
 $studentName = $data['student_name'] ?? false;
-$studentAddress = $data['studentAddress'] ?? false;
-$studentPhone = $data['studentPhone'] ?? false;
+$studentAddress = $data['student_address'] ?? false;
+$studentPhone = $data['student_phone'] ?? false;
 
 include '../../../config.php';
 
