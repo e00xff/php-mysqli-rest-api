@@ -14,7 +14,7 @@
                         <a class="nav-link" href="file_get_contents.php">file_get_contents</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="curl.php">Curl</a>
+                        <a class="nav-link" href="curl.php">CURL</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="guzzle.php">Guzzle</a>

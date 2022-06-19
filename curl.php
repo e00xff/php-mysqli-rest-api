@@ -14,7 +14,7 @@ ob_start();
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h4 class="mb-4">file_get_contents</h4>
+                <h4 class="mb-4">CURL</h4>
 
                 <?php
 
